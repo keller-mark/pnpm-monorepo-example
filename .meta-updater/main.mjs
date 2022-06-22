@@ -39,14 +39,14 @@ export default (workspaceDir) => {
       return { ...manifest, version: meta.version };
     },
     'tsconfig.json': (tsConfig, dir) => {
-      return {
+      return tsConfig ? {
         ...tsConfig,
         compilerOptions: {
           ...tsConfig?.compilerOptions,
           outDir: 'dist',
           rootDir: 'src',
         },
-      };
+      } : tsconfig;
     }
   }
 }
