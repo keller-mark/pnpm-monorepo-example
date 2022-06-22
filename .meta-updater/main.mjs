@@ -4,7 +4,7 @@ import path from 'node:path';
 const MATHGL_VERSION = '^3.5.6';
 const LUMAGL_VERSION = '~8.5.10';
 const DECKGL_VERSION = '8.6.7';
-const REACT_VERSION = '^8.0.0';
+const REACT_VERSION = '^18.0.0';
 const MUI_VERSION = '~4.12.3';
 
 // Mutates package metadata in place
