@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "jsx": "react",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error",
-    "outDir": "./dist"
+    "esModuleInterop": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   }
 }

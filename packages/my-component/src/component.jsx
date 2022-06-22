@@ -1,5 +1,4 @@
-import React from 'react';
-import { add } from "@pnpm-ts-react-example/core";
+import { add } from "@pnpm-ts-react-example/utils";
 
 export function MyComponent(props) {
   const { a, b, color } = props;

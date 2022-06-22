@@ -1,0 +1,13 @@
+{
+  "name": "pnpm-ts-react-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@pnpm-ts-react-example/my-component": "workspace:*",
+    "@pnpm-ts-react-example/utils": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

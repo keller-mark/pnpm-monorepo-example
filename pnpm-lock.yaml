@@ -8,26 +8,32 @@ importers:
     devDependencies:
       typescript: 4.7.4
 
-  packages/core:
-    specifiers: {}
+  packages/main:
+    specifiers:
+      '@pnpm-ts-react-example/my-component': workspace:*
+      '@pnpm-ts-react-example/utils': workspace:*
+    dependencies:
+      '@pnpm-ts-react-example/my-component': link:../my-component
+      '@pnpm-ts-react-example/utils': link:../utils
 
   packages/my-component:
     specifiers:
-      '@pnpm-ts-react-example/core': workspace:*
-      react: ^18.0.0
+      '@pnpm-ts-react-example/utils': workspace:*
     dependencies:
-      '@pnpm-ts-react-example/core': link:../core
-      react: 18.2.0
+      '@pnpm-ts-react-example/utils': link:../utils
+
+  packages/utils:
+    specifiers: {}
 
   sites/demo:
     specifiers:
-      '@pnpm-ts-react-example/my-component': workspace:*
       '@vitejs/plugin-react': ^1.3.2
+      pnpm-ts-react-example: workspace:*
       react: ^18.0.0
       react-dom: ^18.0.0
       vite: ^2.9.9
     dependencies:
-      '@pnpm-ts-react-example/my-component': link:../../packages/my-component
+      pnpm-ts-react-example: link:../../packages/main
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:

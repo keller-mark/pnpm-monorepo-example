@@ -5,13 +5,15 @@
   "type": "module",
   "main": "src/index.js",
   "publishConfig": {
-    "main": "dist/index.mjs"
+    "main": "dist/index.js"
   },
   "scripts": {
     "build": "tsc"
   },
   "dependencies": {
-    "@pnpm-ts-react-example/core": "workspace:*",
+    "@pnpm-ts-react-example/utils": "workspace:*"
+  },
+  "peerDependencies": {
     "react": "^18.0.0"
   },
   "keywords": [],
