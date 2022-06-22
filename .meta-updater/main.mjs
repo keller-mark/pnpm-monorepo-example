@@ -39,7 +39,8 @@ export default (workspaceDir) => {
       return { ...manifest, version: meta.version };
     },
     'tsconfig.json': (tsConfig, dir) => {
-      return tsConfig ? {
+      
+      return (tsConfig && dir !== workspaceDir) ? {
         ...tsConfig,
         compilerOptions: {
           ...tsConfig?.compilerOptions,
