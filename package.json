@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm -r dev",
-    "clean": "pnpm -r exec -- rm -rf node_modules",
-    "test": "meta-updater --test && pnpm -r --parallel test",
+    "start": "pnpm -r start",
     "build": "pnpm -r build",
-    "check-format": "prettier --check --ignore-path .gitignore sites/ packages/",
-    "lint": "npm run check-format && eslint \"packages/*/src/**/*\" \"sites/*/src/**/*\"",
-    "format": "npm run check-format -- --write"
+    "test": "meta-updater --test && pnpm -r --parallel test",
+    "format-check": "prettier --check --ignore-path .gitignore sites/ packages/",
+    "format": "npm run format-check -- --write",
+    "lint": "npm run format-check && eslint \"packages/*/src/**/*\" \"sites/*/src/**/*\"",
+    "clean": "pnpm -r exec -- rm -rf node_modules"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
