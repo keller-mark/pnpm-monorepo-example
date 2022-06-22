@@ -46,7 +46,7 @@ export default (workspaceDir) => {
           outDir: 'dist',
           rootDir: 'src',
         },
-      } : tsconfig;
+      } : tsConfig;
     }
   }
 }
