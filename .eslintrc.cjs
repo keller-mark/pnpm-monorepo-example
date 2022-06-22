@@ -1,8 +1,10 @@
 module.exports = {
   root: true,
-  plugins: ['react', 'react-hooks'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
@@ -16,6 +18,7 @@ module.exports = {
     // All these others reflect the intension that they should be left in the codebase.
     'no-console': [2, { 'allow': ['warn', 'error', 'info', 'groupCollapsed', 'groupEnd'] }],
     'no-underscore-dangle': [0],
+    "react/react-in-jsx-scope": [0],
     // Non-alphabetical groupings can make more sense.
     'react/sort-comp': [0],
     // Makes punctuation after tab awkward.

@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
 const MATHGL_VERSION = '^3.5.6';
 const LUMAGL_VERSION = '~8.5.10';
 const DECKGL_VERSION = '8.6.7';
@@ -26,18 +29,20 @@ function pinVersions(deps = {}) {
 }
 
 export default (workspaceDir) => {
+  let root = path.resolve(workspaceDir, 'package.json');
+  let meta = JSON.parse(fs.readFileSync(root, { encoding: 'utf-8' }));
   return {
     'package.json': (manifest, dir) => {
       pinVersions(manifest.dependencies);
       pinVersions(manifest.devDependencies);
       pinVersions(manifest.peerDependencies);
-      return { ...manifest };
+      return { ...manifest, version: meta.version };
     },
     'tsconfig.json': (tsConfig, dir) => {
       return {
         ...tsConfig,
         compilerOptions: {
-          ...tsConfig.compilerOptions,
+          ...tsConfig?.compilerOptions,
           outDir: 'dist',
           rootDir: 'src',
         },
