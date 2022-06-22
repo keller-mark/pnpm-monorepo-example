@@ -1,0 +1,20 @@
+{
+  "name": "@pnpm-ts-react-example/my-component",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "publishConfig": {
+    "main": "dist/index.mjs"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@pnpm-ts-react-example/core": "workspace:*",
+    "react": "^18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
