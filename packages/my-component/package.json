@@ -2,12 +2,9 @@
   "name": "@pnpm-ts-react-example/my-component",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
-  "main": "src/index.js",
-  "publishConfig": {
-    "main": "dist/index.js"
-  },
+  "module": "dist/index.js",
   "scripts": {
+    "start": "tsc --watch",
     "build": "tsc"
   },
   "dependencies": {

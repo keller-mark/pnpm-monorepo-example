@@ -2,7 +2,11 @@
   "name": "pnpm-ts-react-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc"
+  },
   "dependencies": {
     "@pnpm-ts-react-example/my-component": "workspace:*",
     "@pnpm-ts-react-example/utils": "workspace:*"

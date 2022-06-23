@@ -2,11 +2,9 @@
   "name": "@pnpm-ts-react-example/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
-  "publishConfig": {
-    "main": "dist/index.js"
-  },
+  "module": "dist/index.js",
   "scripts": {
+    "start": "tsc --watch",
     "build": "tsc"
   },
   "keywords": [],
