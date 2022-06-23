@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pnpm -r start",
+    "start": "pnpm -r --parallel start",
     "build": "pnpm -r build",
     "test": "meta-updater --test && pnpm -r --parallel test",
     "format-check": "prettier --check --ignore-path .gitignore sites/ packages/",
