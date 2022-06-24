@@ -2,7 +2,7 @@
   "name": "pnpm-ts-react-example",
   "version": "1.0.0",
   "description": "",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc"

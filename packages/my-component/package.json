@@ -2,10 +2,11 @@
   "name": "@pnpm-ts-react-example/my-component",
   "version": "1.0.0",
   "description": "",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc",
+    "test": "vitest --ui -r ../../ --dir ."
   },
   "dependencies": {
     "@pnpm-ts-react-example/utils": "workspace:*"
