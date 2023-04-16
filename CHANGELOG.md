@@ -1,2 +1,3 @@
+test
 
-old changelog contents here
+full changelog
