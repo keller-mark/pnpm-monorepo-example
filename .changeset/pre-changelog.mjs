@@ -28,7 +28,7 @@ const changesetFiles = fs.readdirSync('.changeset').forEach(file => {
     // Append the affected packages to the first line of the content.
     const contentLines = changeset.content.split('\n');
     const packageInfo = Object.keys(changeset.data).map(name => '`' + name + '`').join(', ');
-    contentLines[4] = `${contentLines[4]} (${packageInfo})`;
+    contentLines[1] = `${contentLines[1]} (${packageInfo})`;
     changeset.content = contentLines.join('\n');
 
     // Overwrite the affected package names, replacing with the root package name.
