@@ -7,5 +7,6 @@
   "fixed": [["pnpm-ts-react-example", "@pnpm-ts-react-example/*"]],
   "commit": false,
   "access": "public",
-  "baseBranch": "main"
+  "baseBranch": "main",
+  "bumpVersionsWithWorkspaceProtocolOnly": true
 }
