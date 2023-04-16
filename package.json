@@ -1,5 +1,6 @@
 {
-  "name": "pnpm-ts-react-example",
+  "name": "pnpm-ts-react-example-monorepo",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +11,10 @@
     "format-check": "prettier --check --ignore-path .gitignore sites/ packages/",
     "format": "npm run format-check -- --write",
     "lint": "npm run format-check && eslint \"packages/*/src/**/*\" \"sites/*/src/**/*\"",
-    "clean": "pnpm -r exec -- rm -rf node_modules"
+    "clean": "pnpm -r exec -- rm -rf node_modules",
+    "changeset-status": "changeset status --since=origin/main",
+    "changeset-version": "changeset version && pnpm install",
+		"changeset-publish": "changeset publish && pnpm publish --filter='./packages/**' --no-git-checks --access public"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
@@ -20,7 +24,9 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@changesets/cli": "^2.17.0",
+    "@svitejs/changesets-changelog-github-compact": "^1.1.0"
   },
   "keywords": [],
   "author": "",

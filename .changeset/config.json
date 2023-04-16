@@ -1,0 +1,11 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
+  "changelog": [
+    "@svitejs/changesets-changelog-github-compact",
+    { "repo": "keller-mark/pnpm-ts-react-example" }
+  ],
+  "fixed": [["pnpm-ts-react-example", "@pnpm-ts-react-example/*"]],
+  "commit": false,
+  "access": "public",
+  "baseBranch": "main"
+}
