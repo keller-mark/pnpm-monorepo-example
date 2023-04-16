@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
   "changelog": [
-    "./changesets-changelog.mjs",
+    "./changesets-changelog.js",
     { "repo": "keller-mark/pnpm-ts-react-example" }
   ],
   "fixed": [["pnpm-ts-react-example", "@pnpm-ts-react-example/*"]],
