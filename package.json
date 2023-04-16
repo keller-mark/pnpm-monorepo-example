@@ -14,7 +14,7 @@
     "clean": "pnpm -r exec -- rm -rf node_modules",
     "changeset-status": "changeset status --since=origin/main",
     "changeset-version": "changeset version && pnpm install",
-		"changeset-publish": "changeset publish && pnpm publish --filter='./packages/**' --no-git-checks --access public"
+		"changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && changeset tag"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
