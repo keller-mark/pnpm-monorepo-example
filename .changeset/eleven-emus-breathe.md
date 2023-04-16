@@ -1,5 +1,5 @@
 ---
-pnpm-ts-react-example: patch
+'@pnpm-ts-react-example/utils': patch
 ---
 
 Add changesets as dependency
