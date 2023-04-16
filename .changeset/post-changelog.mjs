@@ -5,7 +5,7 @@ import { join } from 'node:path';
 // Read the new changelog file,
 // removing the first line since it will always
 // contain the main package name.
-const newChangelog = fs.readFileSync(join('packages', 'main', 'CHANGELOG.md'))
+const newChangelog = fs.readFileSync(join('packages', 'main', 'CHANGELOG.md'), { encoding: 'utf-8' })
   .split('\n')
   .toSpliced(0, 1)
   .join('\n');
