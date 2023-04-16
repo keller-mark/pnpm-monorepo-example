@@ -7,5 +7,5 @@ dist-versioned/
 package-lock.json
 yarn.lock
 .docusaurus/
-packages/**/CHANGELOG.md
-sites/**/CHANGELOG.md
+#packages/**/CHANGELOG.md
+#sites/**/CHANGELOG.md
