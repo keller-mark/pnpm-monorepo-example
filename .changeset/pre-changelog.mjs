@@ -25,6 +25,13 @@ const changesetFiles = fs.readdirSync('.changeset').forEach(file => {
     );
     const gcdStr = Object.keys(SEMVER_MAP).find(key => SEMVER_MAP[key] === gcd);
 
+    // Append the affected packages to the first line of the content.
+    const contentLines = changeset.content.split('\n');
+    const packageInfo = Object.keys(changeset.data).map(name => '`' + name + '`').join(', ');
+    contentLines[4] = `${contentLines[4]} (${packageInfo})`;
+    changeset.content = contentLines.join('\n');
+
+    // Overwrite the affected package names, replacing with the root package name.
     changeset.data = { [mainPackage]: gcdStr };
     // Write the changeset back to the file with the updated frontmatter.
     fs.writeFileSync(filePath, matter.stringify(changeset.content, changeset.data));
