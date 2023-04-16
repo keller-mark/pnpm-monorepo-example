@@ -6,8 +6,8 @@ import { join } from 'node:path';
 // removing the first line since it will always
 // contain the main package name.
 const newChangelogLines = fs.readFileSync(join('packages', 'main', 'CHANGELOG.md'), { encoding: 'utf-8' })
-  .split('\n')
-  .splice(0, 1);
+  .split('\n');
+newChangelogLines.splice(0, 1);
 const newChangelog = newChangelogLines.join('\n');
 const fullChangelog = fs.readFileSync('CHANGELOG.md');
 
