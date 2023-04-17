@@ -48,4 +48,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: ${{ steps.get-tag.outputs.tag }}
-            
+          body_path: RELEASE_NOTES.md
+          

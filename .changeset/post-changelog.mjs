@@ -13,7 +13,7 @@ const newChangelogLines = fs.readFileSync(join(MAIN_PACKAGE_DIR, 'CHANGELOG.md')
   .split('\n');
 newChangelogLines.splice(0, 1);
 const newChangelog = newChangelogLines.join('\n');
-const fullChangelog = fs.readFileSync('CHANGELOG.md');
+const fullChangelog = fs.readFileSync('CHANGELOG.md', { encoding: 'utf-8' });
 
 fs.writeFileSync('CHANGELOG.md', newChangelog + '\n' + fullChangelog);
 

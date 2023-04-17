@@ -14,8 +14,8 @@
     "clean": "pnpm -r exec -- rm -rf node_modules",
     "changeset-status": "changeset status --since=origin/main",
     "changeset-version": "node .changeset/pre-changelog.mjs && changeset version && node .changeset/post-changelog.mjs && pnpm install",
-    "changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && git tag v$(cat ./package.json | jq -r .version) && git push --follow-tags",
-    "changeset-publish-dummy": "git tag v$(cat ./package.json | jq -r .version) && git push --follow-tags && echo \"should-release=true\" >> $GITHUB_OUTPUT"
+    "changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && git tag v$(cat ./package.json | jq -r .version) && git push --follow-tags && node .changeset/get-release-notes.mjs && echo \"should-release=true\" >> $GITHUB_OUTPUT",
+    "changeset-publish-dummy": "git tag v$(cat ./package.json | jq -r .version) && git push --follow-tags && node .changeset/get-release-notes.mjs && echo \"should-release=true\" >> $GITHUB_OUTPUT"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
@@ -29,7 +29,11 @@
     "@changesets/cli": "^2.17.0",
     "@changesets/get-github-info": "^0.5.2",
     "@svitejs/changesets-changelog-github-compact": "^1.1.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "mdast-util-to-string": "^1.0.6",
+    "remark-parse": "^7.0.1",
+    "remark-stringify": "^7.0.3",
+    "unified": "^8.3.2"
   },
   "keywords": [],
   "author": "",
