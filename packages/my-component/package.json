@@ -1,6 +1,6 @@
 {
   "name": "@pnpm-ts-react-example/my-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "module": "dist/index.js",
   "scripts": {
