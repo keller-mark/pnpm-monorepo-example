@@ -42,8 +42,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - id: get-tag
         run: echo "tag=v$(cat ./package.json | jq -r .version)" >> $GITHUB_OUTPUT
-      - id: get-body
-        run: echo "body=$(cat ./packages/main/CHANGELOG.md)" >> $GITHUB_OUTPUT
       - name: Upload release artifacts if publish occurred successfully
         if: steps.changesets.outputs.should-release == 'true'
         uses: softprops/action-gh-release@v1
@@ -51,4 +49,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ steps.get-tag.outputs.tag }}
           name: Release ${{ steps.get-tag.outputs.tag }}
-          body: ${{ steps.get-body.outputs.body }}
+          body_path: ${{ github.workspace }}/packages/main/CHANGELOG.md
