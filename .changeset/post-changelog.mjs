@@ -21,8 +21,5 @@ fs.writeFileSync('CHANGELOG.md', newChangelog + '\n' + fullChangelog);
 // to reflect the new version in the main package.json.
 const mainPkgJson = JSON.parse(fs.readFileSync(join(MAIN_PACKAGE_DIR, 'package.json'), { encoding: 'utf-8' }));
 const rootPkgJson = JSON.parse(fs.readFileSync('package.json', { encoding: 'utf-8' }));
-
-fs.writeFileSync('package.json', JSON.stringify({
-  ...rootPkgJson,
-  version: mainPkgJson.version,
-}, null, 2));
+rootPkgJson.version = mainPkgJson.version;
+fs.writeFileSync('package.json', JSON.stringify(rootPkgJson, null, 2));
