@@ -4,7 +4,8 @@ import matter from 'gray-matter';
 import fs from 'node:fs';
 import { join } from 'node:path';
 
-const SEMVER_MAP = {
+const BUMP_TYPE = {
+  'none': 0,
   'patch': 1,
   'minor': 2,
   'major': 3,
@@ -21,9 +22,9 @@ fs.readdirSync('.changeset').forEach(file => {
     // Get the greatest common denominator.
     const gcd = Math.max(
       ...Object.values(changeset.data)
-        .map(str => SEMVER_MAP[str])
+        .map(str => BUMP_TYPE[str])
     );
-    const gcdStr = Object.keys(SEMVER_MAP).find(key => SEMVER_MAP[key] === gcd);
+    const gcdStr = Object.keys(BUMP_TYPE).find(key => BUMP_TYPE[key] === gcd);
 
     // Append the affected packages to the first line of the content.
     const contentLines = changeset.content.split('\n');
