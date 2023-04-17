@@ -1,4 +1,11 @@
 
+## 1.0.10
+
+### Patch Changes
+
+- Move changeset commands to bash scripts (`pnpm-ts-react-example`) ([`a2c8c46`](https://github.com/keller-mark/pnpm-ts-react-example/commit/a2c8c465662d919592d216400a965d97b305819b))
+
+
 ## 1.0.9
 
 ### Patch Changes
