@@ -1,4 +1,11 @@
 
+## 1.0.4
+
+### Patch Changes
+
+- Fix if statement in workflow (`pnpm-ts-react-example`) ([#11](https://github.com/keller-mark/pnpm-ts-react-example/pull/11))
+
+
 ## 1.0.3
 
 ### Patch Changes
