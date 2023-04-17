@@ -1,4 +1,11 @@
 
+## 1.0.6
+
+### Patch Changes
+
+- Get body from GITHUB_OUTPUT. (`pnpm-ts-react-example`) ([`60e9806`](https://github.com/keller-mark/pnpm-ts-react-example/commit/60e980619f7f528d630f559bc083fe1dab9c00cd))
+
+
 ## 1.0.5
 
 ### Patch Changes
