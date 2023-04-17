@@ -1,7 +1,7 @@
 {
   "name": "pnpm-ts-react-example-monorepo",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "clean": "pnpm -r exec -- rm -rf node_modules",
     "changeset-status": "changeset status --since=origin/main",
     "changeset-version": "node .changeset/pre-changelog.mjs && changeset version && node .changeset/post-changelog.mjs && pnpm install",
-		"changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && git tag v$(cat ./package.json | jq -r .version)"
+    "changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && git tag v$(cat ./package.json | jq -r .version)"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
