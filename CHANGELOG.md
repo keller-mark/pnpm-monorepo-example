@@ -1,4 +1,11 @@
 
+## 1.0.11
+
+### Patch Changes
+
+- Remove extra quotes in bash script. (`pnpm-ts-react-example`) ([`b228346`](https://github.com/keller-mark/pnpm-ts-react-example/commit/b228346a979d40369c0a012a0fe5caead25572de))
+
+
 ## 1.0.10
 
 ### Patch Changes
