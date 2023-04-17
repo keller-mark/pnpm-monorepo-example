@@ -1,4 +1,11 @@
 
+## 1.0.3
+
+### Patch Changes
+
+- Try dummy publish command temporarily. (`pnpm-ts-react-example`) ([#9](https://github.com/keller-mark/pnpm-ts-react-example/pull/9))
+
+
 ## 1.0.2
 
 ### Patch Changes
