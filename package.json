@@ -13,8 +13,8 @@
     "lint": "npm run format-check && eslint \"packages/*/src/**/*\" \"sites/*/src/**/*\"",
     "clean": "pnpm -r exec -- rm -rf node_modules",
     "changeset-status": "changeset status --since=origin/main",
-    "changeset-version": "node .changeset/pre-changelog.mjs && changeset version && node .changeset/post-changelog.mjs && pnpm install",
-		"changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && changeset tag"
+    "changeset-version": "node .changeset/scripts/pre-changelog.mjs && changeset version && node .changeset/scripts/post-changelog.mjs && pnpm install",
+		"changeset-publish": "pnpm publish --filter='./packages/**' --no-git-checks --access public && git tag v$(cat ./package.json | jq -r .version)"
   },
   "devDependencies": {
     "@pnpm/meta-updater": "^0.0.6",
