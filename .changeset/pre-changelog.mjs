@@ -14,7 +14,7 @@ const SEMVER_MAP = {
 const mainPackage = 'pnpm-ts-react-example';
 
 // Get all .md files in the .changeset directory.
-const changesetFiles = fs.readdirSync('.changeset').forEach(file => {
+fs.readdirSync('.changeset').forEach(file => {
   if(file.endsWith('.md')) {
     const filePath = join('.changeset', file);
     const changeset = matter.read(filePath);
