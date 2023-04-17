@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
@@ -49,4 +52,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ steps.get-tag.outputs.tag }}
           name: Release ${{ steps.get-tag.outputs.tag }}
-          body_path: ${{ github.workspace }}/packages/main/CHANGELOG.md
+          body_path: ./packages/main/CHANGELOG.md
