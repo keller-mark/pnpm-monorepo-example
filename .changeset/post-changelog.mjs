@@ -25,4 +25,4 @@ const rootPkgJson = JSON.parse(fs.readFileSync('package.json', { encoding: 'utf-
 fs.writeFileSync('package.json', JSON.stringify({
   ...rootPkgJson,
   version: mainPkgJson.version,
-}));
+}, null, 2));
