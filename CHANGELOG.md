@@ -1,4 +1,11 @@
 
+## 1.0.5
+
+### Patch Changes
+
+- Use body_path for action-gh-release (`pnpm-ts-react-example`) ([`d048c7b`](https://github.com/keller-mark/pnpm-ts-react-example/commit/d048c7bac56e790c0ff50939b0f46ab4fa140af7))
+
+
 ## 1.0.4
 
 ### Patch Changes
