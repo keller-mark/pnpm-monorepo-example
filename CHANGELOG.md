@@ -1,4 +1,11 @@
 
+## 1.0.7
+
+### Patch Changes
+
+- Again (`pnpm-ts-react-example`) ([`87780b9`](https://github.com/keller-mark/pnpm-ts-react-example/commit/87780b9d35408bf4019b3dd0362a8701c43c006b))
+
+
 ## 1.0.6
 
 ### Patch Changes
