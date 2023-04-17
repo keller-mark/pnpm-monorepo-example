@@ -1,6 +1,6 @@
 {
   "name": "pnpm-ts-react-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "module": "dist/index.js",
   "scripts": {
