@@ -1,4 +1,11 @@
 
+## 1.0.9
+
+### Patch Changes
+
+- Fix bug in action-gh-release.with. (`pnpm-ts-react-example`) ([`37008bc`](https://github.com/keller-mark/pnpm-ts-react-example/commit/37008bc4c87a91852749b198b41285e3521609f2))
+
+
 ## 1.0.8
 
 ### Patch Changes
