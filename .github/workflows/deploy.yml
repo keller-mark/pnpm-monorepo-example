@@ -42,12 +42,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
       - id: get-tag
         run: echo "tag=v$(cat ./package.json | jq -r .version)" >> $GITHUB_OUTPUT
-      - run: ls -l ./packages/main/
       - name: Upload release artifacts if publish occurred successfully
         if: steps.changesets.outputs.should-release == 'true'
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ steps.get-tag.outputs.tag }}
-          name: Release ${{ steps.get-tag.outputs.tag }}
-          body_path: ./packages/main/CHANGELOG.md
+          name: ${{ steps.get-tag.outputs.tag }}
+            
