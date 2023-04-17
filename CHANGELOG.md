@@ -1,4 +1,11 @@
 
+## 1.0.8
+
+### Patch Changes
+
+- Use CHANGELOG to get release notes. (`pnpm-ts-react-example`) ([`aae458d`](https://github.com/keller-mark/pnpm-ts-react-example/commit/aae458deacfea82715027cd007111cf59bd24596))
+
+
 ## 1.0.7
 
 ### Patch Changes
