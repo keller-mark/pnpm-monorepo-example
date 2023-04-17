@@ -51,4 +51,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag_name: ${{ steps.get-tag.outputs.tag }}
           name: Release ${{ steps.get-tag.outputs.tag }}
-          body_path: ${{ steps.get-body.outputs.body }}
+          body: ${{ steps.get-body.outputs.body }}
