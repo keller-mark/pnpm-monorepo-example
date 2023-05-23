@@ -38,16 +38,5 @@ export default (workspaceDir) => {
       pinVersions(manifest.peerDependencies);
       return { ...manifest, version: meta.version };
     },
-    'tsconfig.json': (tsConfig, dir) => {
-      
-      return (tsConfig && dir !== workspaceDir) ? {
-        ...tsConfig,
-        compilerOptions: {
-          ...tsConfig?.compilerOptions,
-          outDir: 'dist',
-          rootDir: 'src',
-        },
-      } : tsConfig;
-    }
-  }
+  };
 }

@@ -2,10 +2,26 @@
   "name": "@pnpm-ts-react-example/utils",
   "version": "1.0.11",
   "description": "",
-  "module": "dist/index.js",
+  "type": "module",
+  "main": "dist-tsc/index.js",
+  "publishConfig": {
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "exports": {
+      ".": {
+        "types": "./dist-tsc/index.d.ts",
+        "import": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "src",
+    "dist",
+    "dist-tsc"
+  ],
   "scripts": {
-    "start": "tsc --watch",
-    "build": "tsc"
+    "bundle": "pnpm exec vite build -c ../../scripts/vite.config.js",
+    "test": "pnpm exec vitest --run -r ../../ --dir ."
   },
   "keywords": [],
   "author": "",
