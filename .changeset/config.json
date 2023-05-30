@@ -2,9 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
   "changelog": [
     "./changesets-changelog.js",
-    { "repo": "keller-mark/pnpm-ts-react-example" }
+    { "repo": "keller-mark/pnpm-monorepo-example" }
   ],
-  "fixed": [["pnpm-ts-react-example", "@pnpm-ts-react-example/*"]],
+  "fixed": [["pnpm-monorepo-example", "@pnpm-monorepo-example/*"]],
   "commit": false,
   "access": "public",
   "baseBranch": "main",

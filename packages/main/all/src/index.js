@@ -1,2 +1,2 @@
-export * from '@pnpm-ts-react-example/utils';
-export * from '@pnpm-ts-react-example/my-component';
+export * from '@pnpm-monorepo-example/utils';
+export * from '@pnpm-monorepo-example/my-component';

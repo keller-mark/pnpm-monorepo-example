@@ -1,4 +1,4 @@
-import { add } from '@pnpm-ts-react-example/utils';
+import { add } from '@pnpm-monorepo-example/utils';
 
 export function MyComponent(props) {
   const { a, b, color } = props;

@@ -1,5 +1,5 @@
 {
-  "name": "pnpm-ts-react-example-monorepo",
+  "name": "@pnpm-monorepo-example/root",
   "private": true,
   "version": "1.0.11",
   "description": "",

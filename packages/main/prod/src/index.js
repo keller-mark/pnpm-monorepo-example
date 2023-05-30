@@ -1,2 +1,2 @@
 // eslint-disable-next-line react-refresh/only-export-components
-export * from '@pnpm-ts-react-example/all';
+export * from '@pnpm-monorepo-example/all';

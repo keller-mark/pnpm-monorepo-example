@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-ts-react-example/my-component",
+  "name": "@pnpm-monorepo-example/my-component",
   "version": "1.0.11",
   "description": "",
   "type": "module",
@@ -24,7 +24,7 @@
     "test": "pnpm exec vitest --run -r ../../ --dir ."
   },
   "dependencies": {
-    "@pnpm-ts-react-example/utils": "workspace:*"
+    "@pnpm-monorepo-example/utils": "workspace:*"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"

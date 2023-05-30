@@ -86,14 +86,14 @@ importers:
 
   packages/main/all:
     specifiers:
-      '@pnpm-ts-react-example/my-component': workspace:*
-      '@pnpm-ts-react-example/utils': workspace:*
+      '@pnpm-monorepo-example/my-component': workspace:*
+      '@pnpm-monorepo-example/utils': workspace:*
       '@types/react': ^18.0.28
       react: ^18.0.0
       vitest: ^0.23.4
     dependencies:
-      '@pnpm-ts-react-example/my-component': link:../../my-component
-      '@pnpm-ts-react-example/utils': link:../../utils
+      '@pnpm-monorepo-example/my-component': link:../../my-component
+      '@pnpm-monorepo-example/utils': link:../../utils
     devDependencies:
       '@types/react': 18.2.6
       react: 18.2.0
@@ -101,7 +101,7 @@ importers:
 
   packages/main/dev:
     specifiers:
-      '@pnpm-ts-react-example/all': workspace:*
+      '@pnpm-monorepo-example/all': workspace:*
       '@vitejs/plugin-react': ^4.0.0
       cross-env: ^7.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -109,7 +109,7 @@ importers:
       rimraf: ^3.0.2
       vite: ^4.3.0
     dependencies:
-      '@pnpm-ts-react-example/all': link:../all
+      '@pnpm-monorepo-example/all': link:../all
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -120,7 +120,7 @@ importers:
 
   packages/main/prod:
     specifiers:
-      '@pnpm-ts-react-example/all': workspace:*
+      '@pnpm-monorepo-example/all': workspace:*
       '@vitejs/plugin-react': ^4.0.0
       cross-env: ^7.0.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -129,7 +129,7 @@ importers:
       rollup-plugin-visualizer: ^5.8.3
       vite: ^4.3.0
     dependencies:
-      '@pnpm-ts-react-example/all': link:../all
+      '@pnpm-monorepo-example/all': link:../all
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -141,10 +141,10 @@ importers:
 
   packages/my-component:
     specifiers:
-      '@pnpm-ts-react-example/utils': workspace:*
+      '@pnpm-monorepo-example/utils': workspace:*
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@pnpm-ts-react-example/utils': link:../utils
+      '@pnpm-monorepo-example/utils': link:../utils
       react: 18.2.0
 
   packages/utils:
@@ -153,12 +153,12 @@ importers:
   sites/demo:
     specifiers:
       '@vitejs/plugin-react': ^1.3.2
-      pnpm-ts-react-example: workspace:*
+      pnpm-monorepo-example: workspace:*
       react: ^18.0.0
       react-dom: ^18.0.0
       vite: ^2.9.9
     dependencies:
-      pnpm-ts-react-example: link:../../packages/main/prod
+      pnpm-monorepo-example: link:../../packages/main/prod
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
@@ -173,7 +173,7 @@ importers:
       '@mdx-js/react': ^1.6.21
       copy-text-to-clipboard: ^2.2.0
       docusaurus-plugin-sass: ^0.2.1
-      pnpm-ts-react-example: workspace:*
+      pnpm-monorepo-example: workspace:*
       prism-react-renderer: ^1.1.1
       react: ^16.14.0
       react-dom: ^16.14.0
@@ -185,7 +185,7 @@ importers:
       '@mdx-js/react': 1.6.22_react@16.14.0
       copy-text-to-clipboard: 2.2.0
       docusaurus-plugin-sass: 0.2.2_yzwartbqih57yjjxojz5fcppce
-      pnpm-ts-react-example: link:../../packages/main/prod
+      pnpm-monorepo-example: link:../../packages/main/prod
       prism-react-renderer: 1.3.3_react@16.14.0
       react: 16.14.0
       react-dom: 16.14.0_react@16.14.0

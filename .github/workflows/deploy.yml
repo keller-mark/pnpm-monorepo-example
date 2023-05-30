@@ -28,7 +28,7 @@ jobs:
       - run: pnpm run build
       - run: pnpm run changeset-status
       - name: Create Release Pull Request or Publish to NPM
-        if: github.repository == 'keller-mark/pnpm-ts-react-example'
+        if: github.repository == 'keller-mark/pnpm-monorepo-example'
         id: changesets
         uses: changesets/action@v1
         with:

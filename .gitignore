@@ -12,3 +12,4 @@ packages/**/CHANGELOG.md
 sites/**/CHANGELOG.md
 RELEASE_NOTES.md
 *.tsbuildinfo
+stats.html

@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-ts-react-example/dev",
+  "name": "@pnpm-monorepo-example/dev",
   "version": "1.0.11",
   "author": "",
   "description": "",
@@ -27,7 +27,7 @@
     "build-lib:dev": "cross-env APP_ENV=development vite build --mode lib"
   },
   "dependencies": {
-    "@pnpm-ts-react-example/all": "workspace:*"
+    "@pnpm-monorepo-example/all": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
