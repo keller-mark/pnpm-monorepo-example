@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-tsc/
 dist-root/
 dist-versioned/
 .pnpm-debug.log
@@ -10,3 +11,5 @@ yarn.lock
 packages/**/CHANGELOG.md
 sites/**/CHANGELOG.md
 RELEASE_NOTES.md
+*.tsbuildinfo
+stats.html

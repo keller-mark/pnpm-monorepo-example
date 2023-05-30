@@ -1,4 +1,4 @@
-# pnpm-ts-react-example
+# pnpm-monorepo-example
 
 Opinionated toy example of monorepo that has the following things:
 - Sub-packages published to NPM as JS libraries
@@ -19,7 +19,7 @@ Opinionated toy example of monorepo that has the following things:
 ## Usage
 
 ```sh
-npm install pnpm-ts-react-example
+npm install pnpm-monorepo-example
 ```
 
 ## Development

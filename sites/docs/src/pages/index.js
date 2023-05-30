@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 
-import { MyComponent } from 'pnpm-ts-react-example';
+import { MyComponent } from 'pnpm-monorepo-example';
 
 export default function Index() {
   return (

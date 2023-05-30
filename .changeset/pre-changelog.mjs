@@ -11,8 +11,8 @@ const BUMP_TYPE = {
   'major': 3,
 };
 
-// TODO: update this to 'vitessce';
-const mainPackage = 'pnpm-ts-react-example';
+
+const mainPackage = 'pnpm-monorepo-example';
 
 // Get all .md files in the .changeset directory.
 fs.readdirSync('.changeset').forEach(file => {
