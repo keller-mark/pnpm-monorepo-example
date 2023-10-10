@@ -1,4 +1,11 @@
 
+## 2.0.0
+
+### Major Changes
+
+- Use ts project references, correct type: module property in package.json (`pnpm-monorepo-example`) ([#27](https://github.com/keller-mark/pnpm-monorepo-example/pull/27))
+
+
 ## 1.0.11
 
 ### Patch Changes
